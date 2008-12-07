@@ -1,109 +1,93 @@
 /* Basics
 ------------------------------ */
-html {
-	/* Moz */
-	height: 100%;
-}
-
+html {height: 100%; 	/* Moz */}
 *{margin:0;padding:0}
-body{padding:20px;background:white;text-align:center;background:black;color:#bba;font:80%/140% georgia,serif;}
-h1,h2{font:bold 80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
-a{color:#348;text-decoration:none;outline:none;}
-a:hover{color:#67a;}
-.caption{font-style:italic;color:#887;}
-.demo{position:relative;margin-top:2em;}
-/*.gallery_show{width:702px;margin:0 auto;}*/
-.gallery_show{height:90px;margin:0;}
-.gallery_show li{width:75px;height:75px;border:3px double #111;margin: 2px;background:#000;}
-.gallery_show li div{left:240px}
-.gallery_show li div .caption{font:italic 0.7em/1.4 georgia,serif;}
-
-#main_image{margin:0 auto 20px auto;height:600px;width:600px;background:#222;}
-#main_image img{margin-bottom:1px;}
-
-.nav{padding-bottom:10px;text-align:center;clear:both;font:80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
 
 /* Main Layout
 ------------------------------ */
 body {
-	background: #111;
-	margin: 0px;
-	padding: 0px 0px 50px;
-	text-align: center;
+	font: normal 82%/100% "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #888; /*#bba */
+	background: #000
 }
 #main {
 	text-align: left;
-	margin: 5px auto;
-	width: 685px;
-	min-height:550px;
+	margin: 0 auto;
+	width: 683px;
+	min-height:350px;
 	background: #222;
-	padding: 0px 30px 5px;
+	padding: 0 30px 5px;
 	border: 1px solid #444;
 }
 #titlebar {
 	text-align: center;
-	margin: 15px auto 0;
+	margin: 20px auto 0;
 	width: 745px;
 }
-.sitetitle {
-	margin: 15px 0;
-	}
-#credit, #sort {
-	margin: 0 auto;
-	width: 640px;
+#credit {
+	margin: 10px auto;
+	text-align: center;
+	width: 683px;
 	font-size: 85%;
 	color: #294550;
 }
-#credit a, #sort a {
+#credit a {
 	text-decoration: none;
 	color: #294550;
 	border-bottom: 1px dotted #294550;
 }
-#credit a:hover, #sort a:hover {
+#credit a:hover {
 	color: #748da0;
 	border-bottom: 1px solid #294550;
 	text-decoration: none;
 }
 #gallerytitle {
-	border-bottom: 1px solid #333;
-	padding-bottom: 5px;
-	margin-bottom: 5px;
-	margin-top: 12px;
+	margin: 15px 0;
 	/*min-height: 40px;
   _height: 40px;*/
 }
 #gallerytitle h2 {
 	float: left;
 	font-weight: normal;
-	font-size: 12pt;
+	font-size: 115%;
 }
 
 /* Link Styles
 ------------------------------ */
+a{color:#348;text-decoration:none;outline:none;}
+a:hover{color:#67a;}
 a:link, a:active, a:visited { text-decoration: underline; color: #86a1b6; }
 a:hover, a:focus { text-decoration: underline; color: #94c2e5; }
 
-.sitetitle h1 a:link,.sitetitle h1 a:active,.sitetitle h1 a:visited { text-decoration: none; color: #bbb; font-variant:small-caps; font-family:Georgia, "Times New Roman", Times, serif; letter-spacing:.45em;}
-.sitetitle h1 a:hover,.sitetitle h1 a:focus { text-decoration: none; color: #eee; font-variant:small-caps; font-family:Georgia, "Times New Roman", Times, serif; letter-spacing:.25em;}
+.sitetitle {
+	margin-bottom: 20px;
+}
+.sitetitle h1 a:link,.sitetitle h1 a:active,.sitetitle h1 a:visited {
+	text-decoration: none;
+	color: #bbb;
+	font-variant:small-caps;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+.sitetitle h1 a:hover,.sitetitle h1 a:focus {
+	color: #eee;
+}
 
 /* Text Styles
 ------------------------------ */
-body {
-	font: normal 82%/200% "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
-	color: #888;
+h1,h2{
+	font: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #AAA;
 }
 h1 {
-	font: 125% "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
-	color: #AAA;
-}
-h2 {
-	font: 115% "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
-	font-weight: bold;
-	color: #AAA;
+	font-size: 155%;
+	font-weight: normal;
+	letter-spacing:.6em;
 }
 h2 a:link, h2 a:visited {
 	color: #86a1b6;
 	text-decoration: none;
+	letter-spacing:3px;
 }
 h2 span {
 	color: #666;
@@ -121,9 +105,6 @@ h3 {
 h3 a:link, h3 a:visited { text-decoration: none; }
 h3 a:hover { text-decoration: underline; }
 
-
-/* Miscellaneous
------------------------------- */
 hr {
 	clear: both;
 	height: 0;
@@ -135,142 +116,11 @@ hr {
 img {
 	border: 0;
 }
-blockquote {
-	border-left: 1px dotted #96967E;
-	margin-left: 20px;
-	padding-left: 20px;
-	color: #363630;
-}
-
-#imagemetadata {
-  text-align: right;
-  position: relative;
-  display: none;
-}
-
-#imagemetadata table {
-  text-align: left;
-  line-height: 1em;
-  border: 1px solid #ccc;
-  position: absolute;
-  top: 2em;
-  right: 0px;
-  background-color: #fafafa;
-}
-
-#imagemetadata table td {
-  border-bottom: 1px solid #f0f0f0;
-  background-color: #f8f8f8;
-  padding: 2px 5px;
-}
-
-
-/* Page Navigation
------------------------------- */
-ul.pagelist {
-	clear: both;
-	padding: 0;
-	margin: 20px 0 0 0;
-	list-style-type: none;
-}
-ul.pagelist li {
-	display: inline;
-}
-ul.pagelist li a, ul.pagelist span.disabledlink {
-	padding: 4px;
-}
-ul.pagelist li.current a {
-	font-weight: bold;
-	text-decoration: none;
-	cursor: default;
-	color: #748da0;
-}
-ul.pagelist li.prev {
-	margin-right: 10px;
-}
-ul.pagelist li.next {
-	margin-left: 10px;
-}
-.disabledlink {
-	color: #294550;
-	cursor: default;
-}
-.pagenav {
-	clear: both;
-}
-.disabled_nav {
-	visibility: hidden;
-}
-
-
-/* AJAX
------------------------------- */
-#albumDescEditable, #albumTagsEditable {
-	margin-bottom: 12px;
-}
-#imageDescEditable, #albumTagsEditable {
-	margin-top: 24px;
-}
-#imageDesc, #exif_link {
-	margin-bottom: 4px;
-}
-
-#exif_link {
-  float: right;
-}
-
-/* Tags
------------------------------- */
-.taglist ul {
-	display: inline;
-	list-style-type: none;
-}
-
-.taglist li {
-	background: url(images/tag.png) no-repeat left center;
-	list-style-type: none;
-	padding-left: 18px;
-	float:left;
-	padding-right: 5px;
-}
-
-.taglist .tags_title {
-	background: none;
-	padding-right: 5px;
-	padding-left: 0;
-}
-
-/* Image Thumbnails
------------------------------- */
-.imagethumb a, .imagethumb a:hover {
-	display: block;
-	padding: 9px;
-	margin: 0px 9px 9px 0px;
-	line-height: 0px;
-    border: 1px solid #444;
-	background-color: #333;
-}
-.imagethumb a:visited {
-    background-color: #333;
-    border: 1px solid #444;
-}
-.imagethumb a:hover {
-	background-color:#333;
-	border: 1px solid #ccc;
-}
-.imagethumb {
-	float: left;
-}
-.albumdesc2 {
-	line-height: 18px;
-}
-
 
 /* Album Thumbnails
 ------------------------------ */
 #albums {
 	float: left;
-	margin-bottom: 12px;
 }
 #footnotes {
 	float: left;
@@ -278,14 +128,12 @@ ul.pagelist li.next {
 }
 .album {
 	margin: 4px -4px 4px 12px;
-    padding: 10px 0px 8px 8px;
+   padding: 10px 0px 8px 8px;
 	float: left;
 	width: 314px;
 	border: 1px solid #444;
 	background: #333;
-	line-height: 100%;
 }
-.album a img {  }
 .album .thumb {
     float: left;
     margin-right: 6px;
@@ -295,8 +143,7 @@ ul.pagelist li.next {
 	margin: 0;
 }
 .album p {
-	line-height: 12px;
-	font-size: 11px;
+	font-size: 85%;
   	padding: 4px 0px 0px;
   	margin: 0px;
 }
@@ -304,235 +151,21 @@ ul.pagelist li.next {
 	color: #8DB8CF;
 }
 
-
-/* Individual Image
------------------------------- */
-.image {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-#image {
-	text-align: center;
-	line-height: 0;
-}
-.imgnav {
-	float: right;
-	width: 140px;
-	text-align: center;
-	border: 1px solid #444;
-	background: #282828;
-	margin-top: -10px;
-}
-.imgnav .imgprevious a, .imgnav .imgnext a {
-	display: block;
-	width: 50%;
-	height: 100%;
-	float: left;
-	padding: 4px 0;
-	font-size: 120%;
-	text-decoration: none;
-	line-height: 180%;
-	color: #666;
-}
-.imgnav .imgprevious a:hover, .imgnav .imgnext a:hover {
-	background-color: #333;
-	text-decoration: none;
-	color: #888;
-}
-.imgnav .imgprevious a {
-	float: left;
-}
-.imgnav .imgnext a {
-	float: right;
-}
-#narrow {
-	margin: 0 auto;
-	width: 440px;
-}
-
-
-/* Comments
------------------------------- */
-#comments {
-	clear: both;
-}
-.error {
-  color: #C33;
-  font-weight: bold;
-}
-.comment {
-	padding: 10px;
-	border: 1px solid #444;
-	background: #333;
-	margin-bottom: 12px;
-}
-.commentmeta {
-	margin-bottom: 12px;
-}
-.commentauthor {
-	font-weight: bold;
-}
-.commentdate {
-	margin-top: 12px;
-	color: #555;
-	font-size: 85%;
-}
-
-
 /* Forms
 ------------------------------ */
-.inputbox {
-	width: 250px;
+#text {
 	padding: 2px;
-}
-textarea {
-	padding: 4px;
 	width: 100%;
 	color: #888;
-	font: 100%/200% "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.checkbox {
-	cursor: pointer;
+#wikiedit input {
+	margin: 1px;
+	padding: 2px;
+	border: 1px solid #333;
 }
-.pushbutton {
-	cursor: pointer;
-	padding: 5px 10px;
-}
-label {
-	cursor: pointer;
-}
-label:hover {
-	color: #999;
-}
-#map {margin-left: -77px;}
-
-/* Admin Toolbox
------------------------------- */
-#admin, #admin_data{
-	position: fixed;
-    _position: absolute;
-	right: 0px;
-	top: 0px;
-	width: 120px;
-	border-bottom: 1px solid #444;
-	border-left: 1px solid #444;
-	background: #222;
-    z-index: 2;
-}
-#admin_data{
-	top: 0px;
-	padding-top: 20px;
-	z-index: 1;
-	line-height: 1.6em;
-}
-#admin h3 {
-	font-weight: normal;
-	color: #aaa;
-	margin:0;
-	padding:0;
-}
-#admin h3:hover { color: #86a1b6; }
-
-/* Search Box
------------------------------- */
-#search {
-	float: right;
-	text-align: center;
-	background: #222;
-}
-#search input.pushbutton {
-	padding: 1px;
-	font-size: 80%;
-}
-#search ul {
-  position:absolute;
-  text-align: left;
-  width:20px;
-  margin:0px;
-  padding:2px;
-  list-style:none;
-}
-#search ul .item {
-  display:none;
-}
-#search ul:hover .item {
-  display:block;
-  padding:1px;
-  margin:0px;
-  background-color:#222;
-  color: #fff
-}
-#search li {
-width:150px;
-}
-.clear {
-  clear:both;
-  height:10px;
-}
-
-/* Archive View
----------------------------- */
-#archive{
-	width: 300px;
-	margin: 0 auto;
-	text-align: center;
-}
-ul.archive * {
-	padding:0;
-	margin:0;
-	list-style:none;
-}
-ul.archive #year {
-	margin-top:10px;
-	text-align: center;
-	margin-bottom:5px;
-	font-weight:bold;
-	font-size:18px;
-}
-ul.archive #month {
-	font-size: 14px;
-	list-style:none;
-	border-top:2px solid #666;
-	padding-top: 5px;
-}
-
-/* Tag Cloud
----------------------------- */
-#tag_cloud {
-	text-align: center;
-	background: #111;
-}
-#tag_cloud p {
-	padding:10px 0;
-	margin:20px 0;
-	background: #222;
-	border-top: 3px solid #666;
-	border-bottom: 3px solid #666;
-	font-size: 18px;
-	font-weight:bold;
-	text-align: center;
-}
-
 
 /* Menu
 ---------------------------- */
-
-.clearit {
-	margin: 0;
-	padding: 0;
-	height: 0;
-	clear: both;
-}
-/* --------- Container Hacks ----------- */
-/* Used to ensure the objects stay within the confines of the containing object */
-.force_contain:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-.force_contain { display: inline-block; _height: 1%; }
-/* Hides from IE-mac \*/
-.force_contain { display: block; }
-/* End hide from IE-mac */
-
-/* HORIZONTAL MENU */
 .menu {
    float:left;
    width:100%;
@@ -546,8 +179,6 @@ ul.archive #month {
    clear:left;
    float:left;
    list-style:none;
-   margin:0;
-   padding:0;
    position:relative;
    left:50%;
    text-align:center;
@@ -555,28 +186,21 @@ ul.archive #month {
 .menu ul li {
    display:block;
    float:left;
-   list-style:none;
-   margin:0;
-   padding:0;
    position:relative;
    right:50%;
-	background: transparent url(images/bg-bubplastic.gif) top left no-repeat;
 }
 .menu ul li a {
    display:block;
-   margin:0 0 0 1px;
-   line-height:1.3em;
-	padding: 12px 35px 0 35px;
+   margin:0;
+   line-height:2.9em;
+	padding: 0 35px;
 	text-transform: uppercase;
-	font-family: "Helvetica Neue",helvetica,"microsoft sans serif",arial,sans-serif;
 	font-size: 75%;
 	font-weight: bold;
 	color: #AAA;
 	text-decoration: none;
 	cursor: pointer;
 }
-
-/* GRAY HOVER */
 .menu ul li a:hover,
 .menu ul li a.selflink {
 	background: transparent url(images/bg-bubplastic-h-gray.gif) top left no-repeat;
@@ -585,23 +209,22 @@ ul.archive #month {
 .menu ul li.selflink {
 	background: transparent url(images/bg-bubplastic-h-gray.gif) top right no-repeat;
 }
-/* END BUBBLE PLASTIC HORIZONTAL MENU */
+
+/* --------- Container Hacks ----------- */
+.force_contain:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.force_contain { display: inline-block; _height: 1%; }
+/* Hides from IE-mac \*/
+.force_contain { display: block; }
+/* End hide from IE-mac */
+.clearit {margin: 0; padding: 0; height: 0; clear: both; }
 
 /* PMWIKI */
-#wikicmds {
-  float:right; white-space:nowrap;
-  font-family:Verdana,sans-serif; font-size:80%;
-}
-
-.wikicmds {float: right; font-size: 70%; line-height: 1.8em;}
+.wikicmds { float:right; white-space:nowrap; font-family:Verdana,sans-serif; font-size:70%; }
 .wikicmds ul { list-style:none; margin:0px; padding:0px; }
-.wikicmds li { display:inline; margin:0px 5px; }
+.wikicmds li { display:inline; margin:0px 2px; }
 .wikicmds li a { text-decoration:none; border:none; }
 .wikicmds li a.createlink { display:none; }
 .wikicmds li a:hover { text-decoration:underline; }
-
 .menu li a.createlink { display:none; }
-
-.jcarousel-container {margin-left: auto; margin-right: auto;}
-.pmGalleryWrapper {margin-top: 20px;}
+.pmGalleryWrapper {margin-left: auto; margin-right: auto; }
 #pmGalleryImage {margin-top: 20px; text-align: center; }
