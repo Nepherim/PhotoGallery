@@ -1,0 +1,19 @@
+/* Dark color */
+#credit, #credit a {
+	color: #00437F;
+}
+#credit a {
+	border-color: #00437F;
+}
+/* Base color */
+#credit a:hover, a:link, a:active, a:visited, h3 {
+	color: #0076DF;
+}
+.menu ul li a:hover, .menu ul li a.selflink {
+	border-color: #0076DF;
+}
+/* Highlight color */
+a:hover, a:focus {
+	color: #1F95FF;
+}
+
