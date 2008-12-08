@@ -23,11 +23,6 @@
 		<!--PageTitleFmt-->
 			<h2><a href='{$ScriptUrl}/{$Group}/{$DefaultName}' class='pagegroup'>{$Group}</a> | {$Titlespaced}</h2>
 		<!--/PageTitleFmt-->
-		<!--PageActionFmt-->
-			<div class="wikicmds">
-				<!--wiki:{$Group}.PageActions {$SiteGroup}.PageActions-->
-			</div>
-		<!--/PageActionFmt-->
 	</div>
 
 	<!--PageText-->
@@ -35,7 +30,22 @@
 </div>
 
 <div id="credit">
-	<a href="http://alexwilsonphoto.com/" rel="nofollow">Original design</a> adapted by <a href="http://wiki.solidgone.org/Skins">solidGone.org</a> | Powered by <a href="http://pmwiki.org/">PmWiki</a>
+	<div class="left">
+		<a href="http://alexwilsonphoto.com/" rel="nofollow">Original design</a> adapted by <a href="http://wiki.solidgone.org/Skins">solidGone.org</a> | Powered by <a href="http://pmwiki.org/">PmWiki</a>
+	</div>
+	<!--PageActionFmt-->
+		<div class="wikicmds">
+<!--markup:
+(:if ( authid ) :)
+(:include {$Group}.PageActions {$SiteGroup}.PageActions:)
+%item rel=nofollow class=logout accesskey='$[ak_logout]'%[[{*$FullName}?action=logout | $[Logout] ]]
+(:ifend:)
+(:if ( !authid ) :)
+%item rel=nofollow class=login accesskey='$[ak_login]'%[[{*$FullName}?action=login | $[Login] ]]
+(:ifend:)
+-->
+		</div>
+	<!--/PageActionFmt-->
 </div>
 
 </body>
