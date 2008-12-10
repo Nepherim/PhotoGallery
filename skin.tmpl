@@ -6,6 +6,15 @@
 	<link rel="stylesheet" href="$SkinDirUrl/skin.css" type="text/css">
 	<link rel="stylesheet" href="$SkinDirUrl/color-$SkinColor.css" type="text/css">
 	<!--HTMLHeader-->
+	<script type="text/javascript">
+		// Required because IE7 displays empty elements when the have a background image
+		// (ie, when SiteTabs doesn'te exist menu bar is displayed)
+		$(document).ready(function(){
+			if ($(".menu > *").length > 0) {
+				$('.menu').addClass('menu_bg');
+			}
+		});
+	</script>
 </head>
 <body>
 

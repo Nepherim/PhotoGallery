@@ -136,8 +136,7 @@ img {
 /* Menu
 ---------------------------- */
 .menu {
-   overflow: hidden;
-	margin-bottom: 5px;
+   overflow: auto;
 }
 .menu ul {
    position: relative;
@@ -183,9 +182,9 @@ img {
 .wikicmds li a:hover { text-decoration:underline; }
 .wikicmds p { margin-left: 4px; }
 .menu li a.createlink { display:none; }
-.pmGalleryWrapper {margin-left: auto; margin-right: auto; }
-.pmGalleryWrapper ul {height:85px;overflow:hidden;}
-#pmGalleryImage {margin-top: 20px; text-align: center; }
+.pmGalleryWrapper { margin-left: auto; margin-right: auto; }
+.pmGalleryWrapper ul { height:77px; overflow:hidden; }
+#pmGalleryImage { margin-top: 20px; text-align: center; }
 
 /* Colors: typically not changed */
 body {
@@ -215,8 +214,9 @@ hr, .album, #main {
 #wikiedit input {
 	border-color: #333;
 }
-.menu {
+.menu_bg {
 	background: url(images/bg-bubplastic.gif) top left repeat-x;
+	margin-bottom: 5px;
 }
 .menu ul li a {
 	border-color: #000;
