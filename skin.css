@@ -13,7 +13,7 @@ body {
 	margin: 0 auto;
 	width: 683px;
 	min-height:350px;
-	padding: 0 30px 5px;
+	padding: 0 30px 50px;
 	border: 1px solid;
 }
 #titlebar {
@@ -33,26 +33,20 @@ body {
 }
 #gallerytitle {
 	margin: 15px 0 20px;
-	/*min-height: 40px;
-  _height: 40px;*/
 }
 #gallerytitle h2 {
 	float: left;
 	font-weight: normal;
 	font-size: 115%;
 }
-.left{
-	float: left;
-}
+
 /* Link Styles
 ------------------------------ */
-a{text-decoration:none;outline:none;}
+a { text-decoration:none;outline:none; }
 a:link, a:active, a:visited { text-decoration: underline; }
 a:hover, a:focus { text-decoration: underline; }
 
-.sitetitle {
-	margin-bottom: 30px;
-}
+.sitetitle { margin-bottom: 30px; }
 .sitetitle h1 a:link,.sitetitle h1 a:active,.sitetitle h1 a:visited {
 	text-decoration: none;
 	font-variant:small-caps;
@@ -98,9 +92,6 @@ img {
 
 /* Album Thumbnails
 ------------------------------ */
-#albums {
-	float: left;
-}
 .album {
 	margin: 0 -4px 8px 12px;
    padding: 10px 0px 8px 8px;
@@ -109,8 +100,12 @@ img {
 	border: 1px solid;
 }
 .album .thumb {
-    float: left;
-    margin-right: 6px;
+   float: left;
+   margin-right: 6px;
+}
+.album .thumb img {
+	width: 115px;
+	height: 115px;
 }
 .album h3 {
 	padding: 0;
@@ -120,6 +115,10 @@ img {
 	font-size: 85%;
   	padding: 4px 0px 0px;
   	margin: 0px;
+}
+.caption{
+	font-style:italic;
+	line-height: 2em;
 }
 
 /* Forms
@@ -137,26 +136,22 @@ img {
 /* Menu
 ---------------------------- */
 .menu {
-   overflow:hidden;
+   overflow: hidden;
 	margin-bottom: 5px;
 }
 .menu ul {
-   float:left;
-   position:relative;
-   left:50%;
-   list-style:none;
-   text-align:center;
+   position: relative;
+   list-style: none;
+   text-align: center;
 }
 .menu ul li {
-   float:left;
-   position:relative;
-   right:50%;
-   display:block;
+   position: relative;
+   display: block;
 }
 .menu ul li a {
-   display:block;
+   display: block;
 	cursor: pointer;
-	padding: 0 35px;
+	padding: 0 25px;
    line-height:2.5em;
 	font-size: 75%;
 	font-weight: bold;
@@ -164,14 +159,19 @@ img {
 	text-decoration: none;
 	border-bottom: 3px solid;
 }
+.menu ul.center { left:50%; }
+.menu ul.center li { right:50%; }
+.menu ul.center, .menu ul.center li, .menu ul.left, .menu ul.left li { float:left; }
+.menu ul.right, .menu ul.right li { float: right; }
 
 /* --------- Container Hacks ----------- */
+.left { float: left; }
 .force_contain:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .force_contain { display: inline-block; _height: 1%; }
 /* Hides from IE-mac \*/
 .force_contain { display: block; }
 /* End hide from IE-mac */
-.clearit {display:none; margin: 0; padding: 0; height: 0; clear: both; }
+.clearit {display: none; margin: 0; padding: 0; height: 0; clear: both; }
 
 /* PMWIKI */
 .wikicmds { float:right; white-space:nowrap; }
@@ -184,6 +184,7 @@ img {
 .wikicmds p { margin-left: 4px; }
 .menu li a.createlink { display:none; }
 .pmGalleryWrapper {margin-left: auto; margin-right: auto; }
+.pmGalleryWrapper ul {height:85px;overflow:hidden;}
 #pmGalleryImage {margin-top: 20px; text-align: center; }
 
 /* Colors: typically not changed */
@@ -208,7 +209,7 @@ h2, .menu ul li a {
 hr, .album, #main {
 	border-color: #444;
 }
-#text {
+#text, .caption {
 	color: #888;
 }
 #wikiedit input {
