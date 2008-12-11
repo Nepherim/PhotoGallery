@@ -142,9 +142,8 @@ img {
 
 /* Menu
 ---------------------------- */
-.menu {
-   overflow: auto;
-}
+.menu { overflow: auto; }
+.menu_bg { margin-bottom: 5px; }
 .menu ul {
    position: relative;
    list-style: none;
@@ -192,9 +191,8 @@ img {
 .pmGalleryWrapper { margin-left: auto; margin-right: auto; }
 .pmGalleryWrapper ul { height:85px; overflow:hidden; }
 #pmGalleryImage { margin-top: 20px; text-align: center; }
-.jcarousel-skin-dark .jcarousel-item.active{	border: 1px dotted; }
 .galleria li { margin-bottom: 0 !important; }
-.jcarousel-skin-dark .jcarousel-item {	height: 83px !important; }
+.jcarousel-skin-dark .jcarousel-item {	height: 83px !important; border: 1px dotted; }
 
 /* Colors: typically not changed */
 body { color: #bba; }
@@ -206,10 +204,8 @@ h2, .menu ul li a { color: #aaa; }
 hr, .album, #main { border-color: #444; }
 #text, .caption { color: #888; }
 #wikiedit input {	border-color: #333; }
-.menu_bg {
-	background: url(images/bg-bubplastic.gif) top left repeat-x;
-	margin-bottom: 5px;
-}
+.menu_bg { background: url(images/bg-bubplastic.gif) top left repeat-x;	}
 .menu ul li a { border-color: #000; }
 .menu, body { background-color: #000; }
+.jcarousel-skin-dark .jcarousel-item{	border-color: #000; }
 .jcarousel-skin-dark .jcarousel-item.active{	border-color: #444; }

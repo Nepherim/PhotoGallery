@@ -51,12 +51,12 @@
 	<!--PageActionFmt-->
 		<div class="wikicmds">
 <!--markup:
-(:if ( authid ) :)
-(:include {$Group}.PageActions {$SiteGroup}.PageActions:)
-%item rel=nofollow class=logout accesskey='$[ak_logout]'%[[{*$FullName}?action=logout | $[Logout] ]]
+(:if ( !auth edit ) :)
+* %item rel=nofollow class=login accesskey='$[ak_login]'%[[{*$FullName}?action=login | $[Login] ]]
 (:ifend:)
-(:if ( !authid ) :)
-%item rel=nofollow class=login accesskey='$[ak_login]'%[[{*$FullName}?action=login | $[Login] ]]
+(:if ( auth edit ) :)
+(:include {$Group}.PageActions {$SiteGroup}.PageActions:)
+* %item rel=nofollow class=logout accesskey='$[ak_logout]'%[[{*$FullName}?action=logout | $[Logout] ]]
 (:ifend:)
 -->
 		</div>
