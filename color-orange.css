@@ -1,9 +1,9 @@
 /* Dark color */
 #credit, #credit a {
-	color: #8F5700;
+	color: #6F4400;
 }
-#credit a {
-	border-color: #8F5700;
+h2 a:link, h2 a:visited, .album:hover, #credit a {
+	border-color: #6F4400;
 }
 /* Base color */
 #credit a:hover, a:link, a:active, a:visited, h3 {

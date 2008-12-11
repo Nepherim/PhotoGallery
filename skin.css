@@ -13,7 +13,7 @@ body {
 	margin: 0 auto;
 	width: 683px;
 	min-height:350px;
-	padding: 0 30px 50px;
+	padding: 0 30px 30px;
 	border: 1px solid;
 }
 #titlebar {
@@ -23,7 +23,8 @@ body {
 }
 #credit {
 	width: 745px;
-	margin: 10px auto;
+	margin: 10px auto 0;
+	padding-bottom: 40px;
 	font-size: 85%;
 	text-align: center;
 }
@@ -42,9 +43,10 @@ body {
 
 /* Link Styles
 ------------------------------ */
-a { text-decoration:none;outline:none; }
+a { text-decoration:none;outline:none;zoom: 1; /* force border to show in IE */}
 a:link, a:active, a:visited { text-decoration: underline; }
-a:hover, a:focus { text-decoration: underline; }
+a:hover, a:focus { text-decoration: underline;
+}
 
 .sitetitle { margin-bottom: 30px; }
 .sitetitle h1 a:link,.sitetitle h1 a:active,.sitetitle h1 a:visited {
@@ -67,6 +69,7 @@ h1 {
 h2 a:link, h2 a:visited {
 	text-decoration: none;
 	letter-spacing:3px;
+	border-bottom: 1px dotted;
 }
 h2 a:hover {
 	text-decoration: none;
@@ -99,13 +102,17 @@ img {
 	width: 314px;
 	border: 1px solid;
 }
+.album:hover {
+	border: 1px dotted;
+	cursor: pointer;
+}
 .album .thumb {
    float: left;
    margin-right: 6px;
 }
 .album .thumb img {
-	width: 115px;
-	height: 115px;
+	width: 85px;
+	height: 85px;
 }
 .album h3 {
 	padding: 0;
@@ -183,44 +190,26 @@ img {
 .wikicmds p { margin-left: 4px; }
 .menu li a.createlink { display:none; }
 .pmGalleryWrapper { margin-left: auto; margin-right: auto; }
-.pmGalleryWrapper ul { height:77px; overflow:hidden; }
+.pmGalleryWrapper ul { height:85px; overflow:hidden; }
 #pmGalleryImage { margin-top: 20px; text-align: center; }
+.jcarousel-skin-dark .jcarousel-item.active{	border: 1px dotted; }
+.galleria li { margin-bottom: 0 !important; }
+.jcarousel-skin-dark .jcarousel-item {	height: 83px !important; }
 
 /* Colors: typically not changed */
-body {
-	color: #bba;
-}
-#main {
-	background-color: #222;
-}
-.sitetitle h1 a:link,.sitetitle h1 a:active,.sitetitle h1 a:visited {
-	color: #bbb;
-}
-.sitetitle h1 a:hover,.sitetitle h1 a:focus {
-	color: #eee;
-}
-h2, .menu ul li a {
-	color: #aaa;
-}
-.album {
-	background-color: #333;
-}
-hr, .album, #main {
-	border-color: #444;
-}
-#text, .caption {
-	color: #888;
-}
-#wikiedit input {
-	border-color: #333;
-}
+body { color: #bba; }
+#main { background-color: #222; }
+.sitetitle h1 a:link,.sitetitle h1 a:active,.sitetitle h1 a:visited { color: #bbb; }
+.sitetitle h1 a:hover,.sitetitle h1 a:focus { color: #eee; }
+h2, .menu ul li a { color: #aaa; }
+.album { background-color: #333; }
+hr, .album, #main { border-color: #444; }
+#text, .caption { color: #888; }
+#wikiedit input {	border-color: #333; }
 .menu_bg {
 	background: url(images/bg-bubplastic.gif) top left repeat-x;
 	margin-bottom: 5px;
 }
-.menu ul li a {
-	border-color: #000;
-}
-.menu, body {
-	background-color: #000;
-}
+.menu ul li a { border-color: #000; }
+.menu, body { background-color: #000; }
+.jcarousel-skin-dark .jcarousel-item.active{	border-color: #444; }

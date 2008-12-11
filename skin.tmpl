@@ -10,9 +10,14 @@
 		// Required because IE7 displays empty elements when the have a background image
 		// (ie, when SiteTabs doesn'te exist menu bar is displayed)
 		$(document).ready(function(){
-			if ($(".menu > *").length > 0) {
-				$('.menu').addClass('menu_bg');
+			if ($('#titlebar > .menu > *').length > 0) {
+				$('#titlebar > .menu').addClass('menu_bg');
 			}
+			$('.album').each(function(){
+				$(this).click(
+					function(){ document.location.href = $(this).find('.thumb a').attr('href'); }
+				);
+			});
 		});
 	</script>
 </head>

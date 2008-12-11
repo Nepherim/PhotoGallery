@@ -2,7 +2,7 @@
 #credit, #credit a {
 	color: #00437F;
 }
-#credit a {
+h2 a:link, h2 a:visited, .album:hover, #credit a {
 	border-color: #00437F;
 }
 /* Base color */
