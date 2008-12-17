@@ -36,7 +36,6 @@ body {
 	margin: 15px 0 20px;
 }
 #gallerytitle h2 {
-	float: left;
 	font-weight: normal;
 	font-size: 115%;
 }
@@ -142,7 +141,7 @@ img {
 
 /* Menu
 ---------------------------- */
-.menu { overflow: auto; }
+.menu { overflow: hidden; }
 .menu_bg { margin-bottom: 5px; }
 .menu ul {
    position: relative;
