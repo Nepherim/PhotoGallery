@@ -1,27 +1,20 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>$WikiTitle: {$Group}/{$Titlespaced}</title>
 	<link rel="stylesheet" href="$SkinDirUrl/skin.css" type="text/css">
 	<link rel="stylesheet" href="$SkinDirUrl/color-$SkinColor.css" type="text/css">
 	<!--HTMLHeader-->
 	<script type="text/javascript">
-		// Required because IE7 displays empty elements when the have a background image
-		// (ie, when SiteTabs doesn'te exist menu bar is displayed)
 		$(document).ready(function(){
-			if ($('#titlebar > .menu > *').length > 0) {
-				$('#titlebar > .menu').addClass('menu_bg');
-			}
-			$('.album').each(function(){
-				$(this).click(
-					function(){ document.location.href = $(this).find('.thumb a').attr('href'); }
-				);
+			$('#wikitext .albumdesc').each(function(){
+				$(this).click(	function(){ document.location.href = $(this).find('h3 a').attr('href'); });
 			});
+			$('#pg_Navigation .pg_Next').click( function(){ $.galleria.next(); return false; });
+			$('#pg_Navigation .pg_Prev').click( function(){ $.galleria.prev(); return false; });
 		});
 	</script>
-</head>
-<body>
+</head><body>
 
 <div id="titlebar" >
 	<div class="sitetitle"><h1><a href="{$ScriptUrl}" title="$WikiTitle">$WikiTitle</a></h1></div>
@@ -35,10 +28,9 @@
 <div id="main" class="force_contain">
 	<div id="gallerytitle" >
 		<!--PageTitleFmt-->
-			<h2><a href='{$ScriptUrl}/{$Group}/{$DefaultName}' class='pagegroup'>{$Group}</a> | {$Titlespaced}</h2>
+			<h2><!--markup:(:if group -$DefaultGroup :)[[$DefaultGroup.$DefaultName | $DefaultGroup]] | (:ifend:)[[{$Group}/{$DefaultName} | {$Group}]] | {$Titlespaced} --></h2>
 		<!--/PageTitleFmt-->
 	</div>
-
 	<!--PageText-->
 </div>
 

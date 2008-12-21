@@ -5,9 +5,7 @@ html {height: 100%; 	/* Moz */}
 
 /* Main Layout
 ------------------------------ */
-body {
-	font: normal 82%/100% "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+body { font: normal 82%/100% "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif; }
 #main {
 	text-align: left;
 	margin: 0 auto;
@@ -32,9 +30,7 @@ body {
 	text-decoration: none;
 	border-bottom: 1px dotted;
 }
-#gallerytitle {
-	margin: 15px 0 20px;
-}
+#gallerytitle { margin: 15px 0 20px; }
 #gallerytitle h2 {
 	font-weight: normal;
 	font-size: 115%;
@@ -42,12 +38,11 @@ body {
 
 /* Link Styles
 ------------------------------ */
-a { text-decoration:none;outline:none;zoom: 1; /* force border to show in IE */}
+a { text-decoration:none; outline:none; zoom: 1; /* force border to show in IE */ }
 a:link, a:active, a:visited { text-decoration: underline; }
-a:hover, a:focus { text-decoration: underline;
-}
+a:hover, a:focus { text-decoration: underline; }
 
-.sitetitle { margin-bottom: 30px; }
+.sitetitle { margin-bottom: 20px; }
 .sitetitle h1 a:link,.sitetitle h1 a:active,.sitetitle h1 a:visited {
 	text-decoration: none;
 	font-variant:small-caps;
@@ -56,9 +51,13 @@ a:hover, a:focus { text-decoration: underline;
 
 /* Text Styles
 ------------------------------ */
-h1,h2{
+h1,h2 a {
 	font: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
+}
+h2 {
+	text-transform: lowercase;
+	letter-spacing: .1em;
 }
 h1 {
 	font-size: 155%;
@@ -77,6 +76,7 @@ h3 {
 	font: 110% "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	margin-top: 30px;
+	letter-spacing: .05em;
 }
 h3 a:link, h3 a:visited { text-decoration: none; }
 
@@ -88,9 +88,7 @@ hr {
 	padding: 0;
 	border-top: 1px solid;
 }
-img {
-	border: 0;
-}
+img { border: 0; }
 
 /* Album Thumbnails
 ------------------------------ */
@@ -142,7 +140,6 @@ img {
 /* Menu
 ---------------------------- */
 .menu { overflow: hidden; }
-.menu_bg { margin-bottom: 5px; }
 .menu ul {
    position: relative;
    list-style: none;
@@ -155,20 +152,35 @@ img {
 .menu ul li a {
    display: block;
 	cursor: pointer;
-	padding: 0 25px;
-   line-height:2.5em;
-	font-size: 75%;
+	padding: 0 15px 1px;
+   line-height: 1.8em;
+	font-size: 85%;
 	font-weight: bold;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	text-decoration: none;
 	border-bottom: 3px solid;
+	letter-spacing: .05em;
 }
 .menu ul.center { left:50%; }
 .menu ul.center li { right:50%; }
-.menu ul.center, .menu ul.center li, .menu ul.left, .menu ul.left li { float:left; }
+.menu ul.center, .menu ul.center li, .menu ul.left, .menu ul.left li { float: left; }
 .menu ul.right, .menu ul.right li { float: right; }
 
-/* --------- Container Hacks ----------- */
+/* Navigation
+---------------------------- */
+#pg_Navigation { position: relative; }
+#pg_Navigation .pg_Prev { left: -15px; background: transparent url(images/prev-horizontal-sm.png) no-repeat 0 0; }
+#pg_Navigation .pg_Next { left: 674px; background: transparent url(images/next-horizontal-sm.png) no-repeat 0 0; }
+#pg_Navigation .pg_Next:hover, #pg_Navigation .pg_Prev:hover { cursor: pointer; background-position: -24px 0; }
+#pg_Navigation .pg_Next, #pg_Navigation .pg_Prev {
+	height: 24px;
+	width: 24px;
+	position: absolute;
+	top: 95px;
+}
+
+/* Hacks
+---------------------------- */
 .left { float: left; }
 .force_contain:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .force_contain { display: inline-block; _height: 1%; }
@@ -177,7 +189,8 @@ img {
 /* End hide from IE-mac */
 .clearit {display: none; margin: 0; padding: 0; height: 0; clear: both; }
 
-/* PMWIKI */
+/* PmWiki
+---------------------------- */
 .wikicmds { float:right; white-space:nowrap; }
 .wikicmds p { float:right; }
 .wikicmds ul { float:right; list-style:none; margin:0px; padding:0px; }
@@ -193,17 +206,17 @@ img {
 .galleria li { margin-bottom: 0 !important; }
 .jcarousel-skin-dark .jcarousel-item {	height: 83px !important; border: 1px dotted; }
 
-/* Colors: typically not changed */
+/* Colors: typically not changed
+---------------------------- */
 body { color: #bba; }
 #main { background-color: #222; }
 .sitetitle h1 a:link,.sitetitle h1 a:active,.sitetitle h1 a:visited { color: #bbb; }
-.sitetitle h1 a:hover,.sitetitle h1 a:focus { color: #eee; }
+.sitetitle h1 a:hover,.sitetitle h1 a:focus, .menu ul li a:hover, .menu ul li a:focus { color: #fff; }
 h2, .menu ul li a { color: #aaa; }
 .album { background-color: #333; }
 hr, .album, #main { border-color: #444; }
 #text, .caption { color: #888; }
 #wikiedit input {	border-color: #333; }
-.menu_bg { background: url(images/bg-bubplastic.gif) top left repeat-x;	}
 .menu ul li a { border-color: #000; }
 .menu, body { background-color: #000; }
 .jcarousel-skin-dark .jcarousel-item{	border-color: #000; }

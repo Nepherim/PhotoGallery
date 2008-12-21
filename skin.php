@@ -1,7 +1,7 @@
 <?php if (!defined('PmWiki')) exit();
 /*
  * PmWiki PhotoGallery skin
- * Version 1.0.3  (6-Dec-2008)
+ * Version 0.2.0  (21-Dec-2008)
  * @requires PmWiki 2.2
  *
  * Examples at: http://pmwiki.com/Cookbook/PhotoGallery and http://skins.solidgone.com/PhotoGallery
@@ -12,7 +12,7 @@
  */
 global $FmtPV;
 $FmtPV['$SkinName'] = '"PhotoGallery"';
-$FmtPV['$SkinVersion'] = '"0.1.0"';
+$FmtPV['$SkinVersion'] = '"0.2.0"';
 
 ## Override pmwiki styles otherwise they will override styles declared in css
 global $HTMLStylesFmt;
@@ -42,7 +42,37 @@ function album ($args) {
 	global $pagename;
 	return
 		'<div class="album">'
-		.'<div class="thumb">' .MakeLink($pagename,PSS($o['link']), '<img src="' .$o['thumb'] .'" />') .'</div>'
+		.(empty($o['thumb']) ? '' : '<div class="thumb">' .MakeLink($pagename,PSS($o['link']), '<img src="' .$o['thumb'] .'" />') .'</div>')
 		.'<div class="albumdesc">' .'<h3>' .MakeLink($pagename,PSS($o['link']), $o['title']) .'</h3><p>' .html_entity_decode($o['desc']) .'</p></div>'
 		.'</div>';
+}
+
+Markup('images', '>directives', "/\\(:images\\s*(.*?):\\)/se", "Keep(images(PSS('$1')))");
+function param ($var, $val) {
+	return (empty($val) ? '' : $var .'="' .$val .'" ');
+}
+function images ($args) {
+	$o = ParseArgs($args);
+	global $pagename;
+	return MarkupToHTML($pagename, '
+(:galleria:)
+(:pmgallery '
+	.param('user', $o['user'])
+	.param('album', $o['album'])
+	.param('tag', $o['tag'])
+	.param('random', $o['random'])
+	.param('imagesize', $o['imagesize'])
+	.param('maxresults', $o['maxresults'])
+	.param('provider', $o['provider'])
+	.':)
+(:div id="pg_Navigation":)
+(:div1 class="pg_Prev":)
+(:div1end:)
+(:div1 class="pg_Next":)
+(:div1end:)
+(:divend:)
+(:div id="pmGalleryImage":)
+(:divend:)
+');
+
 }
