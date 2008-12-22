@@ -1,7 +1,7 @@
 <?php if (!defined('PmWiki')) exit();
 /*
  * PmWiki PhotoGallery skin
- * Version 0.2.0  (21-Dec-2008)
+ * Version 0.3.0  (21-Dec-2008)
  * @requires PmWiki 2.2
  *
  * Examples at: http://pmwiki.com/Cookbook/PhotoGallery and http://skins.solidgone.com/PhotoGallery
@@ -12,7 +12,7 @@
  */
 global $FmtPV;
 $FmtPV['$SkinName'] = '"PhotoGallery"';
-$FmtPV['$SkinVersion'] = '"0.2.0"';
+$FmtPV['$SkinVersion'] = '"0.3.0"';
 
 ## Override pmwiki styles otherwise they will override styles declared in css
 global $HTMLStylesFmt;
