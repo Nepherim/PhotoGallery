@@ -1,0 +1,13 @@
+version=pmwiki-2.2.0-beta68 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.4) Gecko/2008102920 Firefox/3.0.4
+author=
+charset=ISO-8859-1
+csum=
+ctime=1229905982
+host=127.0.0.1
+name=Site.PhotogalleryTemplate
+rev=2
+targets=
+text=(:galleria:)%0a(:pmgallery user="{$$user}" album="{$$album}" tag="{$$tag}" random="{$$random}" imagesize="{$$imagesize}" maxresults="{$$maxresults}" provider="{$$provider}":)%0a(:div id="pg_Navigation":)%0a(:div1 class="pg_Prev":)%0a(:div1end:)%0a(:div1 class="pg_Next":)%0a(:div1end:)%0a(:divend:)%0a(:div id="pmGalleryImage":)%0a(:divend:)
+time=1229906249
+

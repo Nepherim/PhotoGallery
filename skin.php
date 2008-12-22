@@ -28,6 +28,13 @@ if ( isset($_GET['color']) && in_array($_GET['color'], $ValidSkinColors) ) {
 	$SkinColor = 'blue';
 }
 
+## Add a custom page storage location
+global $PageStorePath, $WikiLibDirs;
+$PageStorePath = dirname(__FILE__)."/wikilib.d/{\$FullName}";
+$where = count($WikiLibDirs);
+if ($where>1) $where--;
+array_splice($WikiLibDirs, $where, 0, array(new PageStore($PageStorePath)));
+
 ## Define a link stye for new page links
 global $LinkPageCreateFmt;
 SDV($LinkPageCreateFmt, "<a class='createlinktext' href='\$PageUrl?action=edit'>\$LinkText</a>");
@@ -45,34 +52,4 @@ function album ($args) {
 		.(empty($o['thumb']) ? '' : '<div class="thumb">' .MakeLink($pagename,PSS($o['link']), '<img src="' .$o['thumb'] .'" />') .'</div>')
 		.'<div class="albumdesc">' .'<h3>' .MakeLink($pagename,PSS($o['link']), $o['title']) .'</h3><p>' .html_entity_decode($o['desc']) .'</p></div>'
 		.'</div>';
-}
-
-Markup('images', '>directives', "/\\(:images\\s*(.*?):\\)/se", "Keep(images(PSS('$1')))");
-function param ($var, $val) {
-	return (empty($val) ? '' : $var .'="' .$val .'" ');
-}
-function images ($args) {
-	$o = ParseArgs($args);
-	global $pagename;
-	return MarkupToHTML($pagename, '
-(:galleria:)
-(:pmgallery '
-	.param('user', $o['user'])
-	.param('album', $o['album'])
-	.param('tag', $o['tag'])
-	.param('random', $o['random'])
-	.param('imagesize', $o['imagesize'])
-	.param('maxresults', $o['maxresults'])
-	.param('provider', $o['provider'])
-	.':)
-(:div id="pg_Navigation":)
-(:div1 class="pg_Prev":)
-(:div1end:)
-(:div1 class="pg_Next":)
-(:div1end:)
-(:divend:)
-(:div id="pmGalleryImage":)
-(:divend:)
-');
-
 }
