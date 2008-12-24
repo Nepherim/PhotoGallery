@@ -7,7 +7,7 @@
 	<!--HTMLHeader-->
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('#wikitext .albumdesc').each(function(){
+			$('#wikitext .album').each(function(){
 				$(this).click(	function(){ document.location.href = $(this).find('h3 a').attr('href'); });
 			});
 			$('#pg_Navigation .pg_Next').click( function(){ $.galleria.next(); return false; });
