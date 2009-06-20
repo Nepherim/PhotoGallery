@@ -1,6 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>$WikiTitle {$Group}/{$Titlespaced}</title>
 	<link rel="stylesheet" href="$SkinDirUrl/skin.css" type="text/css">
 	<link rel="stylesheet" href="$SkinDirUrl/color-$SkinColor.css" type="text/css">
@@ -20,7 +19,7 @@
 	<div class="sitetitle"><h1><a href="{$ScriptUrl}" title="$WikiTitle">$WikiTitle</a></h1></div>
 	<!--PageTabsFmt-->
 		<div class="menu">
-			<!--wiki:{$Group}.SiteNav {$SiteGroup}.SiteNav {$SiteGroup}.{$SkinName}-SiteNav-->
+			<!--wiki:{$SiteGroup}.{$SkinName}-SiteNav {$Group}.SiteNav {$SiteGroup}.SiteNav-->
 		</div>
 	<!--/PageTabsFmt-->
 </div>
@@ -28,7 +27,7 @@
 <div id="main" class="force_contain">
 	<div id="gallerytitle" >
 		<!--PageTitleFmt-->
-			<h2><!--markup:(:if group -$DefaultGroup :)[[$DefaultGroup.$DefaultName | $DefaultGroup]] | (:ifend:)[[{$Group}/{$DefaultName} | {$Group}]] | {$Titlespaced} --></h2>
+			<h2><!--markup:(:if group -$DefaultGroup :)[[$DefaultGroup.$DefaultName | $DefaultGroup]] | (:ifend:)[[{$Group}.{$DefaultName} | {$Group}]] | {$Titlespaced} --></h2>
 		<!--/PageTitleFmt-->
 	</div>
 	<!--PageText-->
