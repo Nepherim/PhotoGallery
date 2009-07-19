@@ -19,14 +19,14 @@ body { font: normal 82%/100% "Helvetica Neue", "Lucida Grande", Helvetica, Arial
 	margin: 20px auto 0;
 	width: 745px;
 }
-#credit {
+#credits {
 	width: 745px;
 	margin: 10px auto 0;
 	padding-bottom: 40px;
 	font-size: 85%;
 	text-align: center;
 }
-#credit a {
+#credits a {
 	text-decoration: none;
 	border-bottom: 1px dotted;
 }
