@@ -1,8 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!DOCTYPE html 
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
 	<title>$WikiTitle {$Group}/{$Titlespaced}</title>
-	<link rel="stylesheet" href="$SkinDirUrl/skin.css" type="text/css">
-	<link rel="stylesheet" href="$SkinDirUrl/color-$SkinColor.css" type="text/css">
+	<link rel="stylesheet" href="$SkinDirUrl/skin.css" type="text/css" />
+	<link rel="stylesheet" href="$SkinDirUrl/color-$SkinColor.css" type="text/css" />
 	<!--HTMLHeader-->
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -13,21 +16,20 @@
 			$('#pg_Navigation .pg_Prev').click( function(){ $.galleria.prev(); return false; });
 		});
 	</script>
-</head><body>
+</head>
+<body>
 
 <div id="titlebar" >
 	<div class="sitetitle"><h1><a href="{$ScriptUrl}" title="$WikiTitle">$WikiTitle</a></h1></div>
 	<!--PageTabsFmt-->
-		<div class="menu">
-			<!--wiki:{$SiteGroup}.{$SkinName}-SiteNav {$Group}.SiteNav {$SiteGroup}.SiteNav-->
-		</div>
+		<div class="menu"><!--wiki:{$SiteGroup}.{$SkinName}-SiteNav {$Group}.SiteNav {$SiteGroup}.SiteNav--></div>
 	<!--/PageTabsFmt-->
 </div>
 
 <div id="main" class="force_contain">
 	<div id="gallerytitle" >
 		<!--PageTitleFmt-->
-			<h2><!--markup:(:if group -$DefaultGroup :)[[$DefaultGroup.$DefaultName | $DefaultGroup]] | (:ifend:)[[{$Group}.{$DefaultName} | {$Group}]] | {$Titlespaced} --></h2>
+			<h2><!--markup:(:if group -$DefaultGroup :)[[$DefaultGroup.$DefaultName | $DefaultGroup]] | (:ifend:)[[{$Group}/{$DefaultName} | {$Group}]] | {$Titlespaced} --></h2>
 		<!--/PageTitleFmt-->
 	</div>
 	<!--PageText-->
