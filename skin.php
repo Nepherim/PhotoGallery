@@ -2,19 +2,17 @@
 /* PmWiki PhotoGallery skin
  *
  * Examples at: http://pmwiki.com/Cookbook/PhotoGallery and http://solidgone.com/Skins/
- * Copyright (c) 2009 David Gilbert
- * Dual licensed under the MIT and GPL licenses:
- *    http://www.opensource.org/licenses/mit-license.php
- *    http://www.gnu.org/licenses/gpl.html
+ * License: Copyright (c)2016 David Gilbert. This work is licensed under a [[http://creativecommons.org/licenses/by-sa/4.0/ | Creative Commons Attribution-Share Alike 4.0 International]] License. Please retain the links in the footer.
  */
 global $FmtPV;
 $FmtPV['$SkinName'] = '"PhotoGallery"';
-$FmtPV['$SkinVersion'] = '"0.3.0"';
+$FmtPV['$SkinVersion'] = '"0.4.1"';
+$FmtPV['$SkinDate'] = '"20160225"';
 
 ## Move any (:noleft:) or SetTmplDisplay('PageLeftFmt', 0); directives to variables for access in jScript.
 $FmtPV['$TabsBar'] = "\$GLOBALS['TmplDisplay']['PageTabsFmt']";
-Markup('notabs', 'directives',  '/\\(:notabs:\\)/ei', "SetTmplDisplay('PageTabsFmt',0)");
-Markup('album', 'inline', "/\\(:album\\s*(.*?):\\)/se", "Keep(album(PSS('$1')))");
+Markup_e('notabs', 'directives',  '/\\(:notabs:\\)/i', "SetTmplDisplay('PageTabsFmt',0)");
+Markup_e('album', 'inline', "/\\(:album\\s*(.*?):\\)/s", "Keep(album(\$m[1]))");
 
 # ----------------------------------------
 # - Standard Skin Setup
